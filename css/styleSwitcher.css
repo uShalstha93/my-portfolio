@@ -1,4 +1,4 @@
-.style-switcher{
+.style-switcher {
     position: fixed;
     top: 20px;
     right: 0px;
@@ -15,13 +15,14 @@
 
 }
 
-.style-switcher.open{
+.style-switcher.open {
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
 }
 
-.style-switcher h5{
+.style-switcher h5 {
     font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
     color: #302e4d;
     margin-top: 0;
     margin-bottom: 8px;
@@ -29,7 +30,7 @@
     border-bottom: 1px solid #e8dfec;
 }
 
-.style-switcher ul{
+.style-switcher ul {
     margin: 0;
     padding: 0;
     display: block;
@@ -37,21 +38,22 @@
     list-style: none;
 
 }
-.style-switcher ul li{
+
+.style-switcher ul li {
     display: inline-block;
 }
 
-.style-switcher ul li a{
+.style-switcher ul li a {
     height: 30px;
     width: 30px;
     display: block;
     border-radius: 50%;
     cursor: pointer;
     text-decoration: none;
-    margin-right:2px;
+    margin-right: 2px;
 }
 
-.style-switcher .toggle-style-switcher{
+.style-switcher .toggle-style-switcher {
     position: absolute;
     height: 45px;
     width: 45px;
@@ -66,7 +68,11 @@
 
 }
 
-.style-switcher .toggle-style-switcher .fa{
+.style-switcher .toggle-style-switcher .fa {
     font-size: 20px;
     line-height: 43px;
+}
+
+.body-skin {
+    margin: 0 5px;
 }

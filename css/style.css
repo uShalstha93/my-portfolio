@@ -3,6 +3,7 @@
  @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
  @import url('https://fonts.googleapis.com/css?family=Rubik:500,700,900&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@300;400;500;600;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap');
 
 
  /*general style */
@@ -95,6 +96,7 @@
  .row {
      display: -ms-flexbox;
      display: flex;
+     font-family: 'Montserrat', sans-serif;
      -ms-flex-wrap: wrap;
      flex-wrap: wrap;
      margin-right: -15px;
@@ -276,7 +278,7 @@
  .aside .logo a {
      font-size: 40px;
      color: #302e4d;
-     font-family: 'Rubik', sans-serif;
+     font-family: 'Montserrat', sans-serif;
      font-weight: 700;
      text-decoration: none;
      display: inline-block;
@@ -379,6 +381,7 @@
  .aside .nav li a {
      font-size: 16px;
      font-weight: 600;
+     font-family: 'Montserrat', sans-serif;
      color: #302e4d;
      text-decoration: none;
      line-height: 45px;
@@ -399,6 +402,7 @@
 
  .aside .copyright-text {
      font-size: 13px;
+     font-family: 'Montserrat', sans-serif;
      color: #7d7d7d;
  }
 
@@ -422,18 +426,26 @@
      display: inline-block;
      border: 8px solid #ffffff;
      object-fit: cover;
+     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+ }
+
+ .home .intro img:hover {
+     transform: scale(1.2);
+     box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
  }
 
  .home .intro h1 {
      font-size: 30px;
      color: #302e4d;
-     font-family: 'Rubik', sans-serif;
+     font-family: 'Tagesschrift', sans-serif;
+     text-transform: uppercase;
      font-weight: 700;
      margin: 20px 0 5px;
  }
 
  .home .intro p {
      font-size: 18px;
+     font-family: 'Montserrat', sans-serif;
      font-weight: 500;
      margin: 0;
      line-height: 22px;

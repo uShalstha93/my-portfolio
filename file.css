@@ -118,6 +118,7 @@ body {
     cursor: pointer;
     border: none;
     font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .primary-btn {
@@ -439,6 +440,7 @@ body {
     background: var(--gradient);
     color: white;
     transform: translateY(-3px);
+    transition: var(--transition);
 }
 
 .home-buttons {
@@ -941,10 +943,12 @@ body {
     position: absolute;
     top: 15px;
     left: 15px;
-    color: var(--text-light);
+    color: var(--text-color) !important;
     transition: var(--transition);
     pointer-events: none;
     font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 5px;
 }
 
 .form-group input:focus+label,

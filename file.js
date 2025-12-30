@@ -23,7 +23,7 @@ function initTheme() {
 
 function updateNavbarBackground() {
     if (!navbar) return;
-    
+
     if (currentTheme === 'dark') {
         navbar.style.background = 'rgba(31, 41, 55, 0.95)';
     } else {
@@ -58,7 +58,7 @@ function toggleMobileMenu() {
     hamburger?.classList.toggle('active');
     navMenu?.classList.toggle('active');
     hamburger?.setAttribute('aria-expanded', hamburger?.classList.contains('active'));
-    
+
     // Toggle body scroll
     document.body.style.overflow = navMenu?.classList.contains('active') ? 'hidden' : '';
 }
@@ -74,12 +74,12 @@ function closeMobileMenu() {
 // Active Navigation Link Based on Scroll
 function setActiveLink() {
     let scrollPosition = window.scrollY + 100;
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
         const sectionId = section.getAttribute('id');
-        
+
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
             navLinks.forEach(link => {
                 link.classList.remove('active');
@@ -101,7 +101,7 @@ function animateSkillBars() {
             rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
             rect.right <= (window.innerWidth || document.documentElement.clientWidth)
         );
-        
+
         if (isVisible && !bar.classList.contains('animated')) {
             bar.classList.add('animated');
             const width = bar.getAttribute('data-width');
@@ -117,7 +117,7 @@ class Typewriter {
             console.error('Typewriter: No element provided');
             return;
         }
-        
+
         this.element = element;
         try {
             this.words = JSON.parse(element.getAttribute('data-words') || '[]');
@@ -133,16 +133,16 @@ class Typewriter {
         this.isDeleting = false;
         this.isPaused = false;
         this.typeTimeout = null;
-        
+
         this.type();
     }
-    
+
     type() {
         if (this.isPaused || !this.element) return;
-        
+
         const currentWord = this.words[this.wordIndex];
         const fullText = currentWord;
-        
+
         // Check if deleting
         if (this.isDeleting) {
             // Remove char
@@ -151,17 +151,17 @@ class Typewriter {
             // Add char
             this.text = fullText.substring(0, this.text.length + 1);
         }
-        
+
         // Insert text into element
         this.element.innerHTML = `<span class="typewriter-text">${this.text}</span>`;
-        
+
         // Type speed
         let typeSpeed = this.speed;
-        
+
         if (this.isDeleting) {
             typeSpeed = this.deleteSpeed;
         }
-        
+
         // If word is complete
         if (!this.isDeleting && this.text === fullText) {
             // Pause at end
@@ -173,21 +173,21 @@ class Typewriter {
             this.wordIndex = (this.wordIndex + 1) % this.words.length;
             typeSpeed = 500;
         }
-        
+
         if (this.typeTimeout) {
             clearTimeout(this.typeTimeout);
         }
-        
+
         this.typeTimeout = setTimeout(() => this.type(), typeSpeed);
     }
-    
+
     pause() {
         this.isPaused = true;
         if (this.typeTimeout) {
             clearTimeout(this.typeTimeout);
         }
     }
-    
+
     resume() {
         this.isPaused = false;
         this.type();
@@ -197,33 +197,33 @@ class Typewriter {
 // Form Submission Handler
 async function handleFormSubmit(event) {
     event.preventDefault();
-    
+
     const form = event.target;
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
-    
+
     // Disable submit button
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending...';
     submitBtn.style.opacity = '0.7';
-    
+
     try {
         // Get form data
         const formData = new FormData(form);
-        
+
         // Send to Web3Forms
         const response = await fetch('https://api.web3forms.com/submit', {
             method: 'POST',
             body: formData
         });
-        
+
         const result = await response.json();
-        
+
         if (response.status === 200) {
             // Success
             showNotification('Message sent successfully!', 'success');
             form.reset();
-            
+
             // Reset form labels
             form.querySelectorAll('.form-group input, .form-group textarea').forEach(input => {
                 input.classList.remove('has-value');
@@ -249,7 +249,7 @@ function showNotification(message, type = 'success') {
     if (existingNotification) {
         existingNotification.remove();
     }
-    
+
     // Create notification
     const notification = document.createElement('div');
     notification.className = `notification ${type}`;
@@ -257,14 +257,14 @@ function showNotification(message, type = 'success') {
         <span>${message}</span>
         <button class="notification-close">&times;</button>
     `;
-    
+
     // Close button
     const closeBtn = notification.querySelector('.notification-close');
     closeBtn.addEventListener('click', () => {
         notification.style.animation = 'slideOut 0.3s ease';
         setTimeout(() => notification.remove(), 300);
     });
-    
+
     // Auto remove after 5 seconds
     setTimeout(() => {
         if (notification.parentNode) {
@@ -272,7 +272,7 @@ function showNotification(message, type = 'success') {
             setTimeout(() => notification.remove(), 300);
         }
     }, 5000);
-    
+
     document.body.appendChild(notification);
 }
 
@@ -281,20 +281,20 @@ function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            
+
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 // Close mobile menu if open
                 closeMobileMenu();
-                
+
                 // Calculate position
                 const headerOffset = 70;
                 const elementPosition = targetElement.offsetTop;
                 const offsetPosition = elementPosition - headerOffset;
-                
+
                 // Smooth scroll
                 window.scrollTo({
                     top: offsetPosition,
@@ -311,12 +311,12 @@ function initIntersectionObserver() {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animate');
-                
+
                 // Special handling for skill bars
                 if (entry.target.classList.contains('skill-progress')) {
                     const width = entry.target.getAttribute('data-width');
@@ -327,7 +327,7 @@ function initIntersectionObserver() {
             }
         });
     }, observerOptions);
-    
+
     // Observe elements
     document.querySelectorAll('.service-card, .project-card, .skill-progress').forEach(el => {
         observer.observe(el);
@@ -337,19 +337,19 @@ function initIntersectionObserver() {
 // Form input label handling
 function initFormLabels() {
     const formInputs = document.querySelectorAll('.form-group input, .form-group textarea');
-    
+
     formInputs.forEach(input => {
         // Check if input has value on page load
         if (input.value) {
             input.classList.add('has-value');
         }
-        
+
         // Add event listeners
-        input.addEventListener('focus', function() {
+        input.addEventListener('focus', function () {
             this.parentElement.classList.add('focused');
         });
-        
-        input.addEventListener('blur', function() {
+
+        input.addEventListener('blur', function () {
             this.parentElement.classList.remove('focused');
             if (this.value) {
                 this.classList.add('has-value');
@@ -357,8 +357,8 @@ function initFormLabels() {
                 this.classList.remove('has-value');
             }
         });
-        
-        input.addEventListener('input', function() {
+
+        input.addEventListener('input', function () {
             if (this.value) {
                 this.classList.add('has-value');
             } else {
@@ -370,30 +370,32 @@ function initFormLabels() {
 
 // Navbar scroll effect
 function initNavbarScroll() {
-    let lastScrollTop = 0;
-    
+    // let lastScrollTop = 0;
+
     const handleScroll = () => {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
+
         if (scrollTop > 100) {
             navbar.style.boxShadow = 'var(--shadow)';
-            
-            // Hide/show navbar on scroll
-            if (scrollTop > lastScrollTop && scrollTop > 200) {
-                // Scrolling down
-                navbar.style.transform = 'translateY(-100%)';
-            } else {
-                // Scrolling up
-                navbar.style.transform = 'translateY(0)';
-            }
+            navbar.classList.add('scrolled');
+
+            // // Hide/show navbar on scroll
+            // if (scrollTop > lastScrollTop && scrollTop > 200) {
+            //     // Scrolling down
+            //     navbar.style.transform = 'translateY(-100%)';
+            // } else {
+            //     // Scrolling up
+            //     navbar.style.transform = 'translateY(0)';
+            // }
         } else {
             navbar.style.boxShadow = 'none';
-            navbar.style.transform = 'translateY(0)';
+            navbar.classList.remove('scrolled');
+            // navbar.style.transform = 'translateY(0)';
         }
-        
-        lastScrollTop = scrollTop;
+
+        // lastScrollTop = scrollTop;
     };
-    
+
     window.addEventListener('scroll', handleScroll);
 }
 
@@ -409,14 +411,14 @@ function setCurrentYear() {
 document.addEventListener('DOMContentLoaded', () => {
     // Set current year
     setCurrentYear();
-    
+
     // Initialize theme
     initTheme();
-    
+
     // Initialize typewriter
     if (typewriterElement) {
         const typewriter = new Typewriter(typewriterElement);
-        
+
         // Pause typewriter when not in viewport
         const typewriterObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -427,25 +429,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         });
-        
+
         typewriterObserver.observe(typewriterElement);
     }
-    
+
     // Initialize smooth scroll
     initSmoothScroll();
-    
+
     // Initialize intersection observer
     initIntersectionObserver();
-    
+
     // Initialize form labels
     initFormLabels();
-    
+
     // Initialize navbar scroll effect
     initNavbarScroll();
-    
+
     // Set initial active link
     setActiveLink();
-    
+
     // Animate skill bars on load if in viewport
     setTimeout(animateSkillBars, 500);
 });
@@ -471,12 +473,12 @@ hamburger?.addEventListener('click', toggleMobileMenu);
 // Close mobile menu when clicking outside
 document.addEventListener('click', (e) => {
     // Close mobile menu
-    if (hamburger && navMenu && 
-        !hamburger.contains(e.target) && 
+    if (hamburger && navMenu &&
+        !hamburger.contains(e.target) &&
         !navMenu.contains(e.target)) {
         closeMobileMenu();
     }
-    
+
     // Close theme options when clicking outside
     if (themeToggle && !themeToggle.contains(e.target)) {
         themeToggle.classList.remove('active');
@@ -494,11 +496,11 @@ window.addEventListener('scroll', () => {
     if (scrollTimeout) {
         cancelAnimationFrame(scrollTimeout);
     }
-    
+
     scrollTimeout = requestAnimationFrame(() => {
         setActiveLink();
         animateSkillBars();
-        
+
         // Update navbar background on scroll
         const scrollPosition = window.scrollY;
         if (scrollPosition > 50) {
@@ -526,7 +528,7 @@ window.addEventListener('resize', () => {
     if (window.innerWidth > 768) {
         closeMobileMenu();
     }
-    
+
     // Re-animate skill bars
     animateSkillBars();
 });

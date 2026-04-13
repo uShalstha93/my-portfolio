@@ -971,7 +971,7 @@ body {
 }
 
 .footer p {
-    color: #4c4c4c;
+    color: var(--text-light);
     font-size: 0.9rem;
 }
 

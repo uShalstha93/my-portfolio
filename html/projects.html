@@ -4,29 +4,132 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | Ushal Bindukar</title>
+
+  <!-- SEO Meta Tags -->
+  <title>Projects Ushal Bindukar | Web Developer & MERN Stack Expert</title>
+  <meta name="description"
+    content="Learn about Ushal Bindukar - experienced Web Developer specializing in React, Node.js, MongoDB, and MERN Stack. View my education, work experience, and technical skills.">
+  <meta name="keywords"
+    content="Ushal Bindukar, projects web developer, MERN Stack developer Nepal, React developer, Node.js expert, frontend developer Kathmandu">
+  <meta name="author" content="Ushal Bindukar">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Projects Ushal Bindukar | Web Developer Portfolio">
+  <meta property="og:description"
+    content="Experienced MERN Stack developer with expertise in React, Node.js, Express, MongoDB. 74% proficiency in React & MySQL. Available for freelance work.">
+  <meta property="og:image" content="https://ushalbindukar.com.np/images/UshalProfile.png">
+  <meta property="og:url" content="https://ushalbindukar.com.np/html/projects.html">
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Ushal Bindukar Portfolio">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Projects Ushal Bindukar | Web Developer">
+  <meta name="twitter:description"
+    content="Frontend Developer at Oxpan Microsys Pvt. Ltd. Specialized in React, Node.js, and modern web technologies.">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://ushalbindukar.com.np/html/projects.html">
+
   <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
   <link rel="stylesheet" href="../file.css" />
+
+  <!-- Structured Data - Person -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ushal Bindukar",
+      "alternateName": "Ushal Shrestha",
+      "url": "https://ushalbindukar.com.np",
+      "email": "mailto:ushal@example.com",
+      "telephone": "+977-9849836440",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kathmandu",
+        "addressCountry": "Nepal"
+      },
+      "jobTitle": "Frontend Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Oxpan Microsys Pvt. Ltd."
+      },
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "ACME Engineering College"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "NIST College"
+        }
+      ],
+      "knowsAbout": ["React", "Node.js", "Express.js", "MongoDB", "MySQL", "SQL", "WPF C#", "MERN Stack"],
+      "sameAs": [
+        "https://github.com/uShalstha93",
+        "https://www.linkedin.com/in/ushal-bindukar-7aa2a2397/",
+        "https://www.facebook.com/ushal.stha/"
+      ]
+    }
+  </script>
+
+  <!-- Structured Data - About Page -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProjectPage",
+      "name": "Projects Ushal Bindukar",
+      "description": "Professional background, skills, education and experience of Ushal Bindukar, a MERN Stack Developer based in Kathmandu, Nepal.",
+      "url": "https://ushalbindukar.com.np/html/projects.html",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Ushal Bindukar"
+      }
+    }
+  </script>
+
+  <!-- BreadcrumbList Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ushalbindukar.com.np"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://ushalbindukar.com.np/html/projects.html"
+        }
+      ]
+    }
+  </script>
 </head>
 
 <body>
   <!-- Theme Toggle -->
   <div class="theme-toggle">
-    <button id="theme-btn" class="theme-button">
-      <i class="fas fa-palette"></i>
+    <button id="theme-btn" class="theme-button" aria-label="change theme">
+      <i class="fas fa-palette" aria-hidden="true"></i>
     </button>
     <div class="theme-options">
-      <button class="theme-option" data-theme="default">Light</button>
-      <button class="theme-option" data-theme="dark">Dark</button>
+      <button class="theme-option" data-theme="default" aria-label="Light Theme">Light</button>
+      <button class="theme-option" data-theme="dark" aria-label="Dark Theme">Dark</button>
     </div>
   </div>
 
   <!-- Navigation -->
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Main Navigation">
     <div class="nav-container">
       <!-- changed: use an image logo instead of text -->
       <div class="nav-logo">
@@ -49,7 +152,7 @@
           <a href="contact.html" class="nav-link">Contact</a>
         </li>
       </ul>
-      <div class="hamburger">
+      <div class="hamburger" aria-label="Menu" role="button" tabindex="0">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -58,182 +161,193 @@
   </nav>
 
   <!-- Projects Section -->
-  <section id="projects" class="section active">
-    <div class="container">
-      <h2 class="section-title">My Projects</h2>
-      <div class="projects-grid">
-        <!-- Project 1 -->
-        <div class="project-card">
-          <div class="project-image">
-            <img src="../images/kanak.jpg" alt="Kanaklaxmi Webapp" loading="lazy" />
-            <div class="project-overlay">
-              <div class="project-links">
-                <a href="https://kanaklaxmisaccos.com" target="_blank" class="project-link"><i
-                    class="fas fa-external-link-alt"></i></a>
+  <main id="main-content">
+    <section id="projects" class="section active">
+      <div class="container">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="../images/kanak.jpg" alt="Kanaklaxmi Webapp" loading="lazy" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://kanaklaxmisaccos.com" target="_blank" class="project-link" rel="noopener noreferrer"
+                    aria-label="Kanaklaxmi Webapp Profile"><i class="fas fa-external-link-alt"
+                      aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Kanaklaxmi Webapp</h3>
+              <p>
+                An official website for Kanaklaxmi Saving & Credit Cooperative
+                Society Ltd., a financial institution in Nepal. The site
+                represents their digital banking presence, offering information
+                and access to member services alongside their mobile app,
+                Kanaklaxmi Smart mBank, for online transactions and account
+                management.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">ReactJS</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">NodeJS</span>
+                <span class="tech-tag">ExpressJS</span>
+                <span class="tech-tag">MySQL</span>
               </div>
             </div>
           </div>
-          <div class="project-content">
-            <h3>Kanaklaxmi Webapp</h3>
-            <p>
-              An official website for Kanaklaxmi Saving & Credit Cooperative
-              Society Ltd., a financial institution in Nepal. The site
-              represents their digital banking presence, offering information
-              and access to member services alongside their mobile app,
-              Kanaklaxmi Smart mBank, for online transactions and account
-              management.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">ReactJS</span>
-              <span class="tech-tag">Tailwind CSS</span>
-              <span class="tech-tag">NodeJS</span>
-              <span class="tech-tag">ExpressJS</span>
-              <span class="tech-tag">MySQL</span>
-            </div>
-          </div>
-        </div>
 
-        <!-- Project 2 -->
-        <div class="project-card">
-          <div class="project-image">
-            <img src="../images/halin.jpg" alt="Halin Newa Guthi" loading="lazy" />
-            <div class="project-overlay">
-              <div class="project-links">
-                <a href="https://halinnewahguthi.com" target="_blank" class="project-link"><i
-                    class="fas fa-external-link-alt"></i></a>
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="../images/halin.jpg" alt="Halin Newa Guthi" loading="lazy" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://halinnewahguthi.com" target="_blank" class="project-link" rel="noopener noreferrer"
+                    aria-label="Halin Newa Guthi Profile"><i class="fas fa-external-link-alt"
+                      aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Halin Newa Guthi</h3>
+              <p>
+                The Halin Newah Guthi website is a React-powered platform
+                representing a traditional Newar community organization. It
+                includes sections for membership, gallery, and products,
+                reflecting the group’s cultural heritage and community
+                activities. The site’s modern design and single-page app
+                structure highlight seamless navigation and responsive UI built
+                with React, JavaScript, and CSS.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">ReactJS</span>
+                <span class="tech-tag">Bootstrap CSS</span>
               </div>
             </div>
           </div>
-          <div class="project-content">
-            <h3>Halin Newa Guthi</h3>
-            <p>
-              The Halin Newah Guthi website is a React-powered platform
-              representing a traditional Newar community organization. It
-              includes sections for membership, gallery, and products,
-              reflecting the group’s cultural heritage and community
-              activities. The site’s modern design and single-page app
-              structure highlight seamless navigation and responsive UI built
-              with React, JavaScript, and CSS.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">ReactJS</span>
-              <span class="tech-tag">Bootstrap CSS</span>
-            </div>
-          </div>
-        </div>
 
-        <!-- Project 3 -->
-        <div class="project-card">
-          <div class="project-image">
-            <img src="../images/TTT.png" alt="Tic tac toe" loading="lazy" />
-            <div class="project-overlay">
-              <div class="project-links">
-                <a href="https://minigames-tictac.netlify.app" target="_blank" class="project-link"><i
-                    class="fas fa-external-link-alt"></i></a>
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="../images/TTT.png" alt="Tic tac toe" loading="lazy" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://minigames-tictac.netlify.app" target="_blank" class="project-link"
+                    rel="noopener noreferrer" aria-label="Tic tac toe Profile"><i class="fas fa-external-link-alt"
+                      aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Tic tac toe</h3>
+              <p>
+                A smart Tic Tac Toe game built with React, JavaScript, and CSS,
+                where players can challenge an AI opponent. The game includes
+                responsive design, instant move feedback, and intelligent AI
+                logic for an engaging and competitive experience.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">ReactJS</span>
+                <span class="tech-tag">Bootstrap CSS</span>
+                <span class="tech-tag">Javascript</span>
               </div>
             </div>
           </div>
-          <div class="project-content">
-            <h3>Tic tac toe</h3>
-            <p>
-              A smart Tic Tac Toe game built with React, JavaScript, and CSS,
-              where players can challenge an AI opponent. The game includes
-              responsive design, instant move feedback, and intelligent AI
-              logic for an engaging and competitive experience.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">ReactJS</span>
-              <span class="tech-tag">Bootstrap CSS</span>
-              <span class="tech-tag">Javascript</span>
-            </div>
-          </div>
-        </div>
 
-        <!-- Project 4 -->
-        <div class="project-card">
-          <div class="project-image">
-            <img src="../images/blank.jpg" alt="Inventory Webapp" loading="lazy" />
-            <div class="project-overlay">
-              <div class="project-links">
-                <a href="#" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+          <!-- Project 4 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="../images/blank.jpg" alt="Inventory Webapp" loading="lazy" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" target="_blank" class="project-link"><i class="fas fa-external-link-alt"
+                      aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Inventory Webapp</h3>
+              <p>
+                A full-stack application built with React.js, Bootstrap,
+                Node.js, Express.js, and MongoDB. It allows users to efficiently
+                manage products, track stock levels, update inventory in real
+                time, and perform CRUD operations with a responsive,
+                user-friendly interface and secure backend API integration.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">ReactJS</span>
+                <span class="tech-tag">Bootstrap CSS</span>
+                <span class="tech-tag">NodeJS</span>
+                <span class="tech-tag">ExpressJS</span><span class="tech-tag">MongoDB</span>
               </div>
             </div>
           </div>
-          <div class="project-content">
-            <h3>Inventory Webapp</h3>
-            <p>
-              A full-stack application built with React.js, Bootstrap,
-              Node.js, Express.js, and MongoDB. It allows users to efficiently
-              manage products, track stock levels, update inventory in real
-              time, and perform CRUD operations with a responsive,
-              user-friendly interface and secure backend API integration.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">ReactJS</span>
-              <span class="tech-tag">Bootstrap CSS</span>
-              <span class="tech-tag">NodeJS</span>
-              <span class="tech-tag">ExpressJS</span><span class="tech-tag">MongoDB</span>
-            </div>
-          </div>
-        </div>
 
-        <!-- Project 5 -->
-        <div class="project-card">
-          <div class="project-image">
-            <img src="../images/Emi.png" alt="EMI Calculator" loading="lazy" />
-            <div class="project-overlay">
-              <div class="project-links">
-                <a href="https://miniproject-emicalculator.netlify.app" target="_blank" class="project-link"><i
-                    class="fas fa-external-link-alt"></i></a>
+          <!-- Project 5 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="../images/Emi.png" alt="EMI Calculator" loading="lazy" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://miniproject-emicalculator.netlify.app" target="_blank" class="project-link"
+                    rel="noopener noreferrer" aria-label="EMI Calculator Profile"><i class="fas fa-external-link-alt"
+                      aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>EMI Calculator</h3>
+              <p>
+                A responsive web app built with React.js and Bootstrap that
+                calculates monthly loan payments based on principal, interest
+                rate, and tenure. It features real-time input updates, clean UI,
+                and instant EMI breakdown for better financial planning.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">ReactJS</span>
+                <span class="tech-tag">Bootstrap CSS</span>
               </div>
             </div>
           </div>
-          <div class="project-content">
-            <h3>EMI Calculator</h3>
-            <p>
-              A responsive web app built with React.js and Bootstrap that
-              calculates monthly loan payments based on principal, interest
-              rate, and tenure. It features real-time input updates, clean UI,
-              and instant EMI breakdown for better financial planning.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">ReactJS</span>
-              <span class="tech-tag">Bootstrap CSS</span>
-            </div>
-          </div>
-        </div>
 
-        <!-- Project 6 -->
-        <div class="project-card">
-          <div class="project-image">
-            <img src="../images/oxpan.jpg" alt="Oxpan microsys website" loading="lazy" />
-            <div class="project-overlay">
-              <div class="project-links">
-                <a href="https://oxpanmicrosys.com" target="_blank" class="project-link"><i
-                    class="fas fa-external-link-alt"></i></a>
+          <!-- Project 6 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="../images/oxpan.jpg" alt="Oxpan microsys website" loading="lazy" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://oxpanmicrosys.com" target="_blank" class="project-link" rel="noopener noreferrer"
+                    aria-label="Oxpan Microsys Profile"><i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="project-content">
-            <h3>Oxpan microsys website</h3>
-            <p>
-              Content management system for blogging with rich text editor,
-              user comments, and admin dashboard.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">ReactJS</span>
-              <span class="tech-tag">Bootstrap CSS</span>
+            <div class="project-content">
+              <h3>Oxpan microsys website</h3>
+              <p>
+                Content management system for blogging with rich text editor,
+                user comments, and admin dashboard.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">ReactJS</span>
+                <span class="tech-tag">Bootstrap CSS</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
     <!-- <div class="container"> -->
-    <p>&copy; Ushal Bindukar. All rights reserved.</p>
+    <p>&copy; Ushal Bindukar. All rights reserved. | Web Developer Portfolio</p>
+    <div class="footer-links">
+      <a href="../privacy-policy.html">Privacy Policy</a>
+      <a href="../sitemap.xml">Sitemap</a>
+    </div>
     <!-- </div> -->
   </footer>
 

@@ -975,6 +975,140 @@ body {
     font-size: 0.9rem;
 }
 
+.footer-links a {
+    color: inherit;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Tech stack tags */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.tech-tag {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Certification status */
+.cert-status {
+    margin-top: 8px;
+    color: #28a745;
+}
+
+/* Privacy Policy Page Styles */
+.privacy-policy-section {
+    padding: 80px 20px;
+    min-height: calc(100vh - 200px);
+}
+
+.privacy-policy-section .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--bg-color, #fff);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.privacy-policy-section h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color, #333);
+    margin-bottom: 10px;
+}
+
+.last-updated {
+    color: #666;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.policy-section {
+    margin-bottom: 40px;
+}
+
+.policy-section h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color, #333);
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 4px solid #667eea;
+}
+
+.policy-section p,
+.policy-section ul {
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.policy-section ul {
+    padding-left: 30px;
+}
+
+.policy-section li {
+    margin-bottom: 8px;
+}
+
+.policy-section a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.policy-section a:hover {
+    text-decoration: underline;
+}
+
+.compliance-note {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+/* Dark mode support */
+[data-theme="dark"] .privacy-policy-section .container {
+    background: #1a1a1a;
+    color: #fff;
+}
+
+[data-theme="dark"] .policy-section p,
+[data-theme="dark"] .policy-section ul {
+    color: #ccc;
+}
+
+[data-theme="dark"] .compliance-note {
+    background: #2d2d2d;
+}
+
+@media (max-width: 768px) {
+    .privacy-policy-section .container {
+        padding: 20px;
+    }
+
+    .privacy-policy-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .policy-section h2 {
+        font-size: 1.3rem;
+    }
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from {
@@ -1070,6 +1204,10 @@ body {
     }
 
     .footer p {
+        font-size: 0.7rem;
+    }
+
+    .footer a {
         font-size: 0.7rem;
     }
 }

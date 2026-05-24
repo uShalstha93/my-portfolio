@@ -4,32 +4,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | Ushal Bindukar</title>
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+  <!-- SEO Meta Tags -->
+  <title>Ushal Bindukar | Web Developer & MERN Stack Developer</title>
+  <meta name="description"
+    content="Ushal Bindukar - Professional Web Developer specializing in MERN Stack, Frontend Development, and Software Engineering. View my projects and get in touch for collaborations.">
+  <meta name="keywords"
+    content="Ushal Bindukar, Web Developer, MERN Stack, Frontend Developer, Software Engineer, Nepal, Portfolio">
+  <meta name="author" content="Ushal Bindukar">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="7 days">
+
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Ushal Bindukar - Web Developer Portfolio">
+  <meta property="og:description"
+    content="Professional MERN Stack Developer specializing in modern web applications. Check out my work and let's build something amazing!">
+  <meta property="og:image" content="https://ushalbindukar.com.np/images/UshalProfile.png">
+  <meta property="og:image:alt" content="Ushal Bindukar - Web Developer Profile Picture">
+  <meta property="og:url" content="https://ushalbindukar.com.np">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ushal Bindukar Portfolio">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ushal Bindukar | Web Developer">
+  <meta name="twitter:description" content="MERN Stack Developer creating amazing web experiences">
+  <meta name="twitter:image" content="https://ushalbindukar.com.np/images/UshalProfile.png">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://ushalbindukar.com.np">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+  <!-- Preload Critical Assets -->
+  <link rel="preload" href="file.css" as="style">
+  <link rel="preload" href="file.js" as="script">
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="file.css" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ushal Bindukar",
+      "alternateName": "Ushal Shrestha",
+      "url": "https://ushalbindukar.com.np",
+      "email": "mailto:ushal@example.com",
+      "image": "https://ushalbindukar.com.np/images/UshalProfile.png",
+      "jobTitle": "Full Stack Web Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance"
+      },
+      "sameAs": [
+        "https://github.com/uShalstha93",
+        "https://www.linkedin.com/in/ushal-bindukar-7aa2a2397/",
+        "https://www.facebook.com/ushal.stha/",
+        "https://www.instagram.com/ushal.stha/"
+      ],
+      "knowsAbout": ["Web Development", "MERN Stack", "React", "Node.js", "JavaScript", "HTML5", "CSS3", "MongoDB", "Express.js"],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Your University Name"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Nepal"
+      }
+    }
+  </script>
+
+  <!-- BreadcrumbList Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ushalbindukar.com.np"
+      }]
+    }
+  </script>
 </head>
 
 <body>
   <!-- Theme Toggle -->
   <div class="theme-toggle">
-    <button id="theme-btn" class="theme-button">
-      <i class="fas fa-palette"></i>
+    <button id="theme-btn" class="theme-button" aria-label="Change theme">
+      <i class="fas fa-palette" aria-hidden="true"></i>
     </button>
     <div class="theme-options">
-      <button class="theme-option" data-theme="default">Light</button>
-      <button class="theme-option" data-theme="dark">Dark</button>
+      <button class="theme-option" data-theme="default" aria-label="Light theme">Light</button>
+      <button class="theme-option" data-theme="dark" aria-label="Dark theme">Dark</button>
     </div>
   </div>
 
   <!-- Navigation -->
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Main navigation">
     <div class="nav-container">
       <!-- changed: use an image logo instead of text -->
       <div class="nav-logo">
-        <img src="images/logo.jpg" alt="Ushal logo" class="nav-logo-img" loading="lazy" width="140" height="40" />
+        <img src="images/logo.jpg" alt="Ushal Bindukar logo" class="nav-logo-img" loading="lazy" width="140"
+          height="40" />
       </div>
       <ul class="nav-menu">
         <li class="nav-item">
@@ -57,46 +143,57 @@
   </nav>
 
   <!-- Home Section -->
-  <section id="home" class="section active">
-    <div class="home-container">
-      <div class="home-content">
-        <div class="home-text">
-          <h1 class="home-title">
-            Hi, I'm
-            <span class="name-highlight">Ushal Bindukar</span>
-          </h1>
-          <div class="typing-container">
-            <span class="typing-text">A </span>
-            <span class="typewriter" data-wait="3000"
-              data-words='["Web Developer", "Software Engineer", "Frontend Developer", "MERN Stack Developer"]'></span>
-          </div>
-          <div class="social-links">
-            <a href="https://github.com/uShalstha93" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.facebook.com/ushal.stha/" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/ushal.stha/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/ushal-bindukar-7aa2a2397/" target="_blank"><i
-                class="fab fa-linkedin"></i></a>
-          </div>
+  <main id="main-content">
+    <section id="home" class="section active">
+      <div class="home-container">
+        <div class="home-content">
+          <div class="home-text">
+            <h1 class="home-title">
+              Hi, I'm
+              <span class="name-highlight">Ushal Bindukar</span>
+            </h1>
+            <div class="typing-container">
+              <span class="typing-text">A </span>
+              <span class="typewriter" data-wait="3000"
+                data-words='["Web Developer", "Software Engineer", "Frontend Developer", "MERN Stack Developer"]'></span>
+            </div>
 
-          <div class="home-buttons">
-            <a href="download/Resume.pdf" class="btn primary-btn">Download CV</a>
-            <a href="html/contact.html" class="btn secondary-btn">
-              Contact Me</a>
+            <div class="social-links" aria-label="Social media links">
+              <a href="https://github.com/uShalstha93" target="_blank" rel="noopener noreferrer"
+                aria-label="GitHub Profile"><i class="fab fa-github" area-hidden="true"></i></a>
+              <a href="https://www.facebook.com/ushal.stha/" target="_blank" rel="noopener noreferrer"
+                aria-label="Facebook Profile"><i class="fab fa-facebook" area-hidden="true"></i></a>
+              <a href="https://www.instagram.com/ushal.stha/" target="_blank" rel="noopener noreferrer"
+                aria-label="Instagram Profile"><i class="fab fa-instagram" area-hidden="true"></i></a>
+              <a href="https://www.linkedin.com/in/ushal-bindukar-7aa2a2397/" target="_blank" rel="noopener noreferrer"
+                aria-label="LinkedIn Profile"><i class="fab fa-linkedin" area-hidden="true"></i></a>
+            </div>
+
+            <div class="home-buttons">
+              <a href="download/Resume.pdf" class="btn primary-btn" download="Ushal_Bindukar_Resume.pdf">Download CV</a>
+              <a href="html/contact.html" class="btn secondary-btn">
+                Contact Me</a>
+            </div>
           </div>
-        </div>
-        <div class="home-image">
-          <div class="image-container">
-            <img src="images/UshalProfile.png" alt="Developer Photo" loading="eager" decoding="sync" />
+          <div class="home-image">
+            <div class="image-container">
+              <img src="images/UshalProfile.png" alt="Ushal Bindukar - Professional Photo" loading="eager"
+                decoding="sync" />
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
     <!-- <div class="container"> -->
-    <p>&copy; Ushal Bindukar. All rights reserved.</p>
+    <p>&copy; Ushal Bindukar. All rights reserved. | Web Developer Portfolio</p>
+    <div class="footer-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="sitemap.xml">Sitemap</a>
+    </div>
     <!-- </div> -->
   </footer>
 
